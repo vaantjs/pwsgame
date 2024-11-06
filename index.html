@@ -1,0 +1,82 @@
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Memory</title>
+    <style>
+        body {
+            background-color: #add8e6;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 0;
+        }
+        p {
+            font-size: 18px;
+            margin: 10px 0 20px;
+        }
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e0e0e0;
+        }
+        #number-display {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        #input-container {
+            display: none;
+        }
+        #result-container {
+            display: none;
+        }
+        #correct-message {
+            color: green;
+            font-size: 24px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="start-container">
+        <h1>Number Memory</h1>
+        <p>A number will show on the screen for a short time.<br>
+        Type in the correct number to progress to the next level, which will add 1 digit to the number.</p>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+    <div class="container" id="game-container" style="display: none;">
+        <div id="number-display"></div>
+        <div id="input-container">
+            <input type="text" id="user-input" placeholder="Enter the number">
+            <button onclick="checkNumber()">Submit</button>
+        </div>
+        <div id="correct-message" style="display: none;">Correct!</div>
+    </div>
+    <div class="container" id="result-container">
+        <h1>Game Over</h1>
+        <div id="time-results"></div>
+    </div>
+
+<html>
